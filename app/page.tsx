@@ -12,6 +12,7 @@ import {
   Database,
   Server,
   Smartphone,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -493,14 +494,23 @@ export default function Portfolio() {
               transition={{ delay: 0.4 }}
             >
               {[
+                // {
+                //   href: "mailto:mohammed@example.com",
+                //   icon: Mail,
+                //   text: "Email Me",
+                // },
                 {
-                  href: "mailto:mohammed@example.com",
-                  icon: Mail,
-                  text: "Email Me",
+                  href: "https://github.com/IzharMohammed",
+                  icon: Github,
+                  text: "GitHub",
                 },
-                { href: "https://github.com", icon: Github, text: "GitHub" },
                 {
-                  href: "https://linkedin.com",
+                  href: "https://x.com/MohammedIz48960",
+                  icon: X,
+                  text: "Twitter",
+                },
+                {
+                  href: "https://www.linkedin.com/in/mohammed-izhar-46b232253/",
                   icon: Linkedin,
                   text: "LinkedIn",
                 },
