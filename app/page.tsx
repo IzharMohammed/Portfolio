@@ -277,7 +277,7 @@ export default function Portfolio() {
                 Mohammed Izhar
               </motion.h1>
               <motion.p
-                className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-2xl px-2"
+                className="text-lg sm:text-xl md:text-2xl max-w-2xl px-2"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -285,7 +285,7 @@ export default function Portfolio() {
                 Full Stack Web Developer & Freelancer
               </motion.p>
               <motion.p
-                className="text-base sm:text-lg text-gray-500 max-w-3xl px-2 leading-relaxed"
+                className="text-base sm:text-lg  max-w-3xl px-2 leading-relaxed"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
@@ -299,7 +299,7 @@ export default function Portfolio() {
             {/* Contact Info */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-gray-400"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm"
             >
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
@@ -333,7 +333,7 @@ export default function Portfolio() {
                   variant="outline"
                   size="lg"
                   asChild
-                  className="w-full sm:w-auto border-gray-400 text-gray-300 hover:bg-gray-900 hover:text-white hover:border-white"
+                  className="w-full sm:w-auto border-gray-400  hover:bg-gray-900 hover:text-white hover:border-white"
                 >
                   <Link href="#contact">Get In Touch</Link>
                 </Button>
@@ -361,17 +361,17 @@ export default function Portfolio() {
             variants={scrollVariants}
             className="max-w-4xl mx-auto text-center space-y-6 px-4"
           >
-            <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg  leading-relaxed">
               Hello, World! I am Mohammed Izhar – a Full Stack Web Developer
             </p>
-            <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg  leading-relaxed">
               With expertise in the T3 stack, I specialize in building
               high-quality saas applications using Next.js, TypeScript, and
               modern development technologies. As a freelancer, I love exploring
               new technologies and turning ideas into reality through personal
               and client projects.
             </p>
-            <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg leading-relaxed">
               Beyond frontend development, I have strong knowledge in DevOps
               concepts including Docker containerization, which helps me build
               and deploy scalable, cloud-native solutions.
