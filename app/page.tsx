@@ -302,11 +302,7 @@ export default function Portfolio() {
             >
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                <span>Guntur, Andhra Pradesh, India</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                <span>he/him</span>
+                <span>kurnool, Andhra Pradesh, India</span>
               </div>
             </motion.div>
 
