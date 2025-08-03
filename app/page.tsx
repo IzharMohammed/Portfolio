@@ -48,16 +48,35 @@ const projects = [
     image: "/assets/storekit-features.png",
     liveUrl: "https://storekit.app/",
     videoUrl: null,
-    tags: ["Next.js", "TypeScript", "AI", "E-commerce", "SaaS"],
+    tags: [
+      "T3 stack",
+      "Next js",
+      "TRPC",
+      "TypeScript",
+      "Better-auth",
+      "Hono",
+      "AI",
+      "Google Gemini",
+      "E-commerce",
+      "SaaS",
+    ],
   },
   {
     title: "TheDeals",
     description:
       "A SaaS platform with role-based access control featuring admin and customer roles. Admins can manage products, banners, and store configurations while customers enjoy a seamless shopping experience.",
-    // image: "/placeholder.svg?height=300&width=500",
+    image: "/assets/thedeals.png",
     liveUrl: "https://www.thedeals.site/",
     videoUrl: null,
-    tags: ["React", "Node.js", "MongoDB", "Role-based Auth", "SaaS"],
+    tags: [
+      "T3 Stack",
+      "Next js",
+      "TRPC",
+      "TypeScript",
+      "Better-auth",
+      "Role-based Auth",
+      "SaaS",
+    ],
   },
 ];
 
