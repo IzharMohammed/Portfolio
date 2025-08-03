@@ -242,7 +242,7 @@ export default function Portfolio() {
               >
                 {/* Replace this div with your actual image */}
                 <Image
-                  src="/assets/" // Replace with your actual image path
+                  src="/assets/izhar.jpeg" // Replace with your actual image path
                   alt="Mohammed Izhar"
                   width={160}
                   height={160}
