@@ -411,7 +411,7 @@ export default function Portfolio() {
                 whileHover={{ scale: 1.1, y: -5 }}
                 className="flex flex-col items-center group cursor-pointer"
               >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg bg-gray-900 border border-gray-600 flex items-center justify-center transition-all duration-300 group-hover:border-white group-hover:bg-gray-800">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg border border-gray-600 flex items-center justify-center transition-all duration-300">
                   <Image
                     src={tech.icon}
                     alt={tech.name}
@@ -420,7 +420,7 @@ export default function Portfolio() {
                     className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
                   />
                 </div>
-                <span className="text-xs sm:text-sm text-gray-400 mt-2 text-center group-hover:text-white transition-colors">
+                <span className="text-xs sm:text-sm  mt-2 text-center  transition-colors">
                   {tech.name}
                 </span>
               </motion.div>
