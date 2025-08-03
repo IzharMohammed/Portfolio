@@ -135,16 +135,16 @@ export default function Portfolio() {
         transition={{ duration: 0.6 }}
         className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
       >
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
+        <div className="container mx-auto max-w-6xl px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="flex h-14 sm:h-16 items-center justify-between">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
               className="flex items-center space-x-2"
             >
-              <Terminal className="h-6 w-6" />
-              <span className="font-mono text-lg font-bold">
+              <Terminal className="h-5 w-5 sm:h-6 sm:w-6" />
+              <span className="font-mono text-sm sm:text-lg font-bold truncate">
                 mohammed@dev:~$
               </span>
             </motion.div>
@@ -159,29 +159,29 @@ export default function Portfolio() {
         </div>
       </motion.header>
 
-      <main className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <main className="container mx-auto max-w-6xl px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.section
           style={{ y, opacity }}
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="py-20 md:py-32"
+          className="py-12 sm:py-16 md:py-20 lg:py-32"
         >
-          <div className="flex flex-col items-center text-center space-y-8">
+          <div className="flex flex-col items-center text-center space-y-6 sm:space-y-8">
             <motion.div variants={itemVariants} className="relative">
               <motion.div
-                className="w-32 h-32 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 flex items-center justify-center"
+                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 flex items-center justify-center"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <Code className="w-16 h-16 text-primary" />
+                <Code className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-primary" />
               </motion.div>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="space-y-4">
+            <motion.div variants={itemVariants} className="space-y-3 sm:space-y-4">
               <motion.h1
-                className="text-4xl md:text-6xl font-bold font-mono"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-mono px-2"
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -189,7 +189,7 @@ export default function Portfolio() {
                 Mohammed Izhar
               </motion.h1>
               <motion.p
-                className="text-xl md:text-2xl text-muted-foreground max-w-2xl"
+                className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl px-2"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -197,7 +197,7 @@ export default function Portfolio() {
                 Full Stack Web Developer
               </motion.p>
               <motion.p
-                className="text-lg text-muted-foreground max-w-3xl"
+                className="text-base sm:text-lg text-muted-foreground max-w-3xl px-2 leading-relaxed"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
@@ -210,7 +210,7 @@ export default function Portfolio() {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap gap-2 justify-center max-w-4xl"
+              className="flex flex-wrap gap-2 justify-center max-w-4xl px-2"
             >
               {skills.map((skill, index) => (
                 <motion.div
@@ -223,7 +223,7 @@ export default function Portfolio() {
                 >
                   <Badge
                     variant="secondary"
-                    className="text-sm py-1 px-3 cursor-pointer"
+                    className="text-xs sm:text-sm py-1 px-2 sm:px-3 cursor-pointer"
                   >
                     {skill}
                   </Badge>
@@ -231,20 +231,22 @@ export default function Portfolio() {
               ))}
             </motion.div>
 
-            <motion.div variants={itemVariants} className="flex gap-4">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-sm sm:max-w-none px-2">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto"
               >
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="w-full sm:w-auto">
                   <Link href="#projects">View Projects</Link>
                 </Button>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto"
               >
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
                   <Link href="#contact">Get In Touch</Link>
                 </Button>
               </motion.div>
@@ -258,16 +260,16 @@ export default function Portfolio() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="py-20"
+          className="py-12 sm:py-16 md:py-20"
         >
           <motion.h2
             variants={scrollVariants}
-            className="text-3xl md:text-4xl font-bold font-mono mb-12 text-center"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold font-mono mb-8 sm:mb-12 text-center px-2"
           >
             $ whoami
           </motion.h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 icon: Server,
@@ -292,24 +294,24 @@ export default function Portfolio() {
                 key={item.title}
                 variants={scrollVariants}
                 whileHover={{
-                  scale: 1.05,
-                  y: -10,
+                  scale: 1.02,
+                  y: -5,
                   transition: { type: "spring", stiffness: 300 },
                 }}
                 className="cursor-pointer"
               >
                 <Card className="h-full transition-all duration-300 hover:shadow-lg">
-                  <CardHeader>
+                  <CardHeader className="pb-3 sm:pb-6">
                     <motion.div
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
                     >
-                      <item.icon className="w-8 h-8 text-primary mb-2" />
+                      <item.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-2" />
                     </motion.div>
-                    <CardTitle>{item.title}</CardTitle>
+                    <CardTitle className="text-lg sm:text-xl">{item.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{item.description}</p>
+                  <CardContent className="pt-0">
+                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">{item.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -324,16 +326,16 @@ export default function Portfolio() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="py-20"
+          className="py-12 sm:py-16 md:py-20"
         >
           <motion.h2
             variants={scrollVariants}
-            className="text-3xl md:text-4xl font-bold font-mono mb-12 text-center"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold font-mono mb-8 sm:mb-12 text-center px-2"
           >
             $ ls projects/
           </motion.h2>
 
-          <div className="space-y-12">
+          <div className="space-y-12 sm:space-y-16 md:space-y-20">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -342,10 +344,10 @@ export default function Portfolio() {
                 viewport={{ once: true, margin: "-50px" }}
                 className={`flex flex-col ${
                   index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"
-                } gap-8 items-center`}
+                } gap-6 sm:gap-8 items-center`}
               >
                 <motion.div
-                  className="flex-1"
+                  className="flex-1 w-full"
                   whileHover={{ scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -371,21 +373,21 @@ export default function Portfolio() {
                 </motion.div>
 
                 <motion.div
-                  className="flex-1 space-y-4"
+                  className="flex-1 space-y-4 w-full px-2 sm:px-0"
                   initial={{ x: index % 2 === 0 ? 50 : -50, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
                   <motion.h3
-                    className="text-2xl md:text-3xl font-bold font-mono"
-                    whileHover={{ x: 10 }}
+                    className="text-xl sm:text-2xl md:text-3xl font-bold font-mono"
+                    whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     {project.title}
                   </motion.h3>
                   <motion.p
-                    className="text-muted-foreground text-lg leading-relaxed"
+                    className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
@@ -405,15 +407,15 @@ export default function Portfolio() {
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.5 + tagIndex * 0.1 }}
-                        whileHover={{ scale: 1.1, y: -2 }}
+                        whileHover={{ scale: 1.05, y: -1 }}
                       >
-                        <Badge variant="outline">{tag}</Badge>
+                        <Badge variant="outline" className="text-xs sm:text-sm">{tag}</Badge>
                       </motion.div>
                     ))}
                   </motion.div>
 
                   <motion.div
-                    className="flex gap-4"
+                    className="flex flex-col sm:flex-row gap-3 sm:gap-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
@@ -421,8 +423,9 @@ export default function Portfolio() {
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
+                      className="w-full sm:w-auto"
                     >
-                      <Button asChild>
+                      <Button asChild className="w-full sm:w-auto">
                         <Link
                           href={project.liveUrl}
                           target="_blank"
@@ -437,8 +440,9 @@ export default function Portfolio() {
                       <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        className="w-full sm:w-auto"
                       >
-                        <Button variant="outline" asChild>
+                        <Button variant="outline" asChild className="w-full sm:w-auto">
                           <Link
                             href={project.videoUrl}
                             target="_blank"
@@ -464,21 +468,21 @@ export default function Portfolio() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="py-20"
+          className="py-12 sm:py-16 md:py-20"
         >
           <motion.h2
             variants={scrollVariants}
-            className="text-3xl md:text-4xl font-bold font-mono mb-12 text-center"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold font-mono mb-8 sm:mb-12 text-center px-2"
           >
             $ contact --help
           </motion.h2>
 
           <motion.div
             variants={scrollVariants}
-            className="text-center space-y-8"
+            className="text-center space-y-6 sm:space-y-8"
           >
             <motion.p
-              className="text-xl text-muted-foreground max-w-2xl mx-auto"
+              className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -488,17 +492,12 @@ export default function Portfolio() {
             </motion.p>
 
             <motion.div
-              className="flex justify-center gap-6"
+              className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 max-w-md sm:max-w-none mx-auto px-4"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
               {[
-                // {
-                //   href: "mailto:mohammed@example.com",
-                //   icon: Mail,
-                //   text: "Email Me",
-                // },
                 {
                   href: "https://github.com/IzharMohammed",
                   icon: Github,
@@ -522,18 +521,20 @@ export default function Portfolio() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
+                  className="w-full sm:w-auto"
                 >
                   <Button
                     size="lg"
                     variant={index === 0 ? "default" : "outline"}
                     asChild
+                    className="w-full sm:w-auto"
                   >
                     <Link
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <item.icon className="w-5 h-5 mr-2" />
+                      <item.icon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                       {item.text}
                     </Link>
                   </Button>
@@ -546,16 +547,16 @@ export default function Portfolio() {
 
       {/* Footer */}
       <motion.footer
-        className="border-t py-8"
+        className="border-t py-6 sm:py-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        {/* <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {/* <div className="container mx-auto max-w-6xl px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="text-center text-muted-foreground">
             <motion.p
-              className="font-mono"
+              className="font-mono text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
