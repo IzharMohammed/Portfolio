@@ -528,7 +528,7 @@ export default function Portfolio() {
                   whileHover={{ scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <Card className="overflow-hidden group cursor-pointer">
+                  <Card className="overflow-hidden group cursor-pointer  border-gray-700 hover:border-white">
                     <motion.div
                       className="aspect-video relative overflow-hidden"
                       whileHover={{ scale: 1.05 }}
@@ -564,7 +564,7 @@ export default function Portfolio() {
                     {project.title}
                   </motion.h3>
                   <motion.p
-                    className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed"
+                    className=" text-sm sm:text-base md:text-lg leading-relaxed"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
@@ -586,7 +586,10 @@ export default function Portfolio() {
                         transition={{ delay: 0.5 + tagIndex * 0.1 }}
                         whileHover={{ scale: 1.05, y: -1 }}
                       >
-                        <Badge variant="outline" className="text-xs sm:text-sm">
+                        <Badge
+                          variant="outline"
+                          className="text-xs sm:text-sm border-gray-600  "
+                        >
                           {tag}
                         </Badge>
                       </motion.div>
@@ -604,7 +607,10 @@ export default function Portfolio() {
                       whileTap={{ scale: 0.95 }}
                       className="w-full sm:w-auto"
                     >
-                      <Button asChild className="w-full sm:w-auto">
+                      <Button
+                        asChild
+                        className="w-full sm:w-auto bg-white hover:bg-gray-200 text-black"
+                      >
                         <Link
                           href={project.liveUrl}
                           target="_blank"
@@ -624,7 +630,7 @@ export default function Portfolio() {
                         <Button
                           variant="outline"
                           asChild
-                          className="w-full sm:w-auto"
+                          className="w-full sm:w-auto border-gray-600 text-gray-300 hover:bg-gray-900 hover:text-white hover:border-white"
                         >
                           <Link
                             href={project.videoUrl}
@@ -665,7 +671,7 @@ export default function Portfolio() {
             className="text-center space-y-6 sm:space-y-8"
           >
             <motion.p
-              className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4 leading-relaxed"
+              className="text-lg sm:text-xl  max-w-2xl mx-auto px-4 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -675,7 +681,7 @@ export default function Portfolio() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 max-w-md sm:max-w-none mx-auto px-4"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-2xl mx-auto px-4"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -685,16 +691,19 @@ export default function Portfolio() {
                   href: "https://github.com/IzharMohammed",
                   icon: Github,
                   text: "GitHub",
+                  username: "IzharMohammed",
                 },
                 {
                   href: "https://x.com/MohammedIz48960",
                   icon: X,
-                  text: "Twitter",
+                  text: "X",
+                  username: "@MohammedIz48960",
                 },
                 {
                   href: "https://www.linkedin.com/in/mohammed-izhar-46b232253/",
                   icon: Linkedin,
                   text: "LinkedIn",
+                  username: "mohammed-izhar",
                 },
               ].map((item, index) => (
                 <motion.div
@@ -704,23 +713,23 @@ export default function Portfolio() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
-                  className="w-full sm:w-auto"
+                  className="w-full"
                 >
-                  <Button
-                    size="lg"
-                    variant={index === 0 ? "default" : "outline"}
-                    asChild
-                    className="w-full sm:w-auto"
+                  <Link
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-4 rounded-lg  border border-gray-700   transition-all duration-300 group"
                   >
-                    <Link
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <item.icon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                      {item.text}
-                    </Link>
-                  </Button>
+                    <div className="flex items-center gap-3">
+                      <item.icon className="w-5 h-5  group-hover:text-white transition-colors" />
+                      <div className="text-left">
+                        <div className=" font-medium">{item.text}</div>
+                        <div className="text-sm ">{item.username}</div>
+                      </div>
+                    </div>
+                    <ExternalLink className="w-4 h-4   transition-colors" />
+                  </Link>
                 </motion.div>
               ))}
             </motion.div>
