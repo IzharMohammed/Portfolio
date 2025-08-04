@@ -37,6 +37,6 @@ jobs:
           vercel-token: ${{secrets.VERCEL_TOKEN}}
           vercel-org-id: ${{secrets.VERCEL_ORG_ID}}
           vercel-project-id: ${{secrets.VERCEL_PROJECT_ID}}
-          alias-domain: domain.com
+          alias-domains: domain.com
           working-directory: ./
           vercel-args: "--prod"
