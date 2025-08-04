@@ -51,10 +51,12 @@ export const metadata: Metadata = {
       "Building modern web applications with React, Next.js, and Node.js.",
     images: ["/assets/luffy.jpg"], // Replace with your Twitter image
   },
-  themeColor: "#000000", // Dark theme (adjust to your design)
-  metadataBase: new URL("https://izhardev.me"), // Base URL for all metadata links
+  // themeColor: "#000000", // Dark theme (adjust to your design)
+  metadataBase: new URL("https://www.izhardev.me"), // Base URL for all metadata links
 };
-
+export const viewport = {
+  themeColor: '#000000',
+};
 export default function RootLayout({
   children,
 }: Readonly<{
