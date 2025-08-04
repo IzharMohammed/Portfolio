@@ -42,7 +42,7 @@ export const projects = [
             "A full-featured blog application similar to Medium with real-time chat functionality. Features secure authentication, image uploads with Cloudinary, dark/light theme toggle, and fully responsive design. Users can create, edit, and share articles with an integrated chat system.",
         image: "/assets/medium.jpg", // Add your project image
         liveUrl: null,
-        videoUrl: "https://www.linkedin.com/posts/mohammed-izhar-46b232253_enhanced-medium-project-now-with-chatting-activity-7320136504964526080-CLIu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6BCxMB3z-ot6wnF6UvPvE3wyNtFHIqmRs", // Add your local video file
+        videoUrl: "https://www.linkedin.com/posts/mohammed-izhar-46b232253_enhanced-medium-project-now-with-chatting-activity-7320136504964526080-CLIu",
         videoType: "linkedin",
         tags: [
             "React.js",
@@ -64,7 +64,7 @@ export const projects = [
         image: "/assets/GoodReads.jpg", // Add your project image
         liveUrl: null,
         videoType: "linkedin",
-        videoUrl: "https://www.linkedin.com/posts/mohammed-izhar-46b232253_reactjs-webdevelopment-javascript-activity-7210753432415006720-nlnP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6BCxMB3z-ot6wnF6UvPvE3wyNtFHIqmRs", // Add your local video file
+        videoUrl: "https://www.linkedin.com/posts/mohammed-izhar-46b232253_reactjs-webdevelopment-javascript-activity-7210753432415006720-nlnP",
         tags: [
             "React",
             "Tailwind CSS",
@@ -74,4 +74,5 @@ export const projects = [
             "React Hot Toast",
         ],
     },
+    
 ];
