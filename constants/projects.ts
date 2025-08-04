@@ -40,7 +40,7 @@ export const projects = [
         title: "Medium Clone",
         description:
             "A full-featured blog application similar to Medium with real-time chat functionality. Features secure authentication, image uploads with Cloudinary, dark/light theme toggle, and fully responsive design. Users can create, edit, and share articles with an integrated chat system.",
-        image: "/assets/medium-clone.png", // Add your project image
+        image: "/assets/medium.jpg", // Add your project image
         liveUrl: "https://your-medium-clone.com", // Add your live URL
         videoUrl: "/videos/Medium.mp4", // Add your local video file
         tags: [
@@ -60,7 +60,7 @@ export const projects = [
         title: "GoodReads Clone",
         description:
             "A comprehensive book management application inspired by GoodReads. Users can discover, track, and review books with a beautiful and intuitive interface. Features advanced search, book recommendations, reading progress tracking, and a responsive design.",
-        image: "/assets/goodreads-clone.png", // Add your project image
+        image: "/assets/GoodReads.jpg", // Add your project image
         liveUrl: "https://your-goodreads-clone.com", // Add your live URL
         videoUrl: "/videos/GoodReads.mp4", // Add your local video file
         tags: [
