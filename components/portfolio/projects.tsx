@@ -134,25 +134,30 @@ const Projects = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
                 >
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-full sm:w-auto"
-                  >
-                    <Button
-                      asChild
-                      className="w-full sm:w-auto bg-white hover:bg-gray-200 text-black"
+                  {/* Live Demo Button - Show when liveUrl exists */}
+                  {project.liveUrl && (
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-full sm:w-auto"
                     >
-                      <Link
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <Button
+                        asChild
+                        className="w-full sm:w-auto bg-white hover:bg-gray-200 text-black"
                       >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </Link>
-                    </Button>
-                  </motion.div>
+                        <Link
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Live Demo
+                        </Link>
+                      </Button>
+                    </motion.div>
+                  )}
+
+                  {/* Watch Demo Button - Show when videoUrl exists */}
                   {project.videoUrl && (
                     <motion.div
                       whileHover={{ scale: 1.05 }}
@@ -166,6 +171,24 @@ const Projects = () => {
                       >
                         <Play className="w-4 h-4 mr-2" />
                         Watch Demo
+                      </Button>
+                    </motion.div>
+                  )}
+
+                  {/* Fallback message when neither liveUrl nor videoUrl exists */}
+                  {!project.liveUrl && !project.videoUrl && (
+                    <motion.div
+                      className="w-full sm:w-auto"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.7 }}
+                    >
+                      <Button
+                        variant="outline"
+                        disabled
+                        className="w-full sm:w-auto border-gray-600 text-gray-500 cursor-not-allowed"
+                      >
+                        Coming Soon
                       </Button>
                     </motion.div>
                   )}
