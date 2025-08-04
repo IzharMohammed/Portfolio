@@ -71,8 +71,8 @@ const techStack = [
   },
   {
     name: "Hono",
-    icon: "https://raw.githubusercontent.com/honojs/hono/main/docs/images/hono-title-bg-removed.png",
-  }, // Hono doesn't have Devicon
+    icon: "/assets/hono.svg"
+  }, 
   {
     name: "Docker",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
@@ -92,15 +92,15 @@ const techStack = [
   {
     name: "Mongoose",
     icon: "https://avatars.githubusercontent.com/u/7552965?s=200&v=4",
-  }, // Mongoose logo
+  },
   {
     name: "Python",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
   {
     name: "Langchain",
-    icon: "https://avatars.githubusercontent.com/u/110760374?s=200&v=4",
-  }, // LangChain logo
+    icon: "/assets/langchain-1.webp"
+  },
   {
     name: "AI agents",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
