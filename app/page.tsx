@@ -24,6 +24,7 @@ import { Badge } from "@/components/ui/badge";
 
 import { useRef } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import ExperienceSection from "@/components/experience";
 
 const skills = [
   "JavaScript",
@@ -71,8 +72,8 @@ const techStack = [
   },
   {
     name: "Hono",
-    icon: "/assets/hono.svg"
-  }, 
+    icon: "/assets/hono.svg",
+  },
   {
     name: "Docker",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
@@ -99,7 +100,7 @@ const techStack = [
   },
   {
     name: "Langchain",
-    icon: "/assets/langchain-1.webp"
+    icon: "/assets/langchain-1.webp",
   },
   {
     name: "AI agents",
@@ -673,6 +674,9 @@ export default function Portfolio() {
             ))}
           </div>
         </motion.section>
+
+        {/* Experience section */}
+        <ExperienceSection />
 
         {/* Contact Section */}
         <motion.section
