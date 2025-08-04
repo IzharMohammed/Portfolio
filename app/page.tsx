@@ -1,59 +1,20 @@
 "use client";
 
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
-import {
-  Github,
-  ExternalLink,
-  Play,
-  Mail,
-  Linkedin,
-  Terminal,
-  Code,
-  Database,
-  Server,
-  Smartphone,
-  X,
-  MapPin,
-  User,
-} from "lucide-react";
+import { Code, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 import { useRef } from "react";
-import { ThemeToggle } from "@/components/theme-toggle";
-import ExperienceSection from "@/components/experience";
-import {
-  containerVariants,
-  itemVariants,
-  scrollVariants,
-} from "@/constants/framer";
-import TechStack from "@/components/tech-stack";
-import About from "@/components/about";
-import Header from "@/components/header";
-import Projects from "@/components/projects";
-import Contact from "@/components/contact";
-import WhoAmI from "@/components/whoami";
-
-const skills = [
-  "JavaScript",
-  "TypeScript",
-  "React JS",
-  "Next JS",
-  "Node JS",
-  "Express JS",
-  "Hono",
-  "Docker",
-  "GraphQL",
-  "Prisma",
-  "Drizzle",
-  "Mongoose",
-  "Python",
-  "Langchain",
-  "Ai agents",
-];
+import ExperienceSection from "@/components/portfolio/experience";
+import { containerVariants, itemVariants } from "@/constants/framer";
+import TechStack from "@/components/portfolio/tech-stack";
+import About from "@/components/portfolio/about";
+import Header from "@/components/portfolio/header";
+import Projects from "@/components/portfolio/projects";
+import Contact from "@/components/portfolio/contact";
+import WhoAmI from "@/components/portfolio/whoami";
 
 export default function Portfolio() {
   const ref = useRef(null);

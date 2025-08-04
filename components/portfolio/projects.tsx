@@ -1,10 +1,10 @@
 import { containerVariants, scrollVariants } from "@/constants/framer";
 import { projects } from "@/constants/projects";
 import { motion } from "framer-motion";
-import { Card } from "./ui/card";
+import { Card } from "../ui/card";
 import Image from "next/image";
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
+import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
 import Link from "next/link";
 import { ExternalLink, Play } from "lucide-react";
 

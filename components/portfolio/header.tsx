@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Terminal } from "lucide-react";
-import { ThemeToggle } from "./theme-toggle";
+import { ThemeToggle } from "../theme-toggle";
 
 const Header = () => {
   return (
