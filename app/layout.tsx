@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "Next.js",
     "Node.js",
   ],
-  authors: [{ name: "Izhar Mohammed", url: "https://izhardev.me" }],
+  authors: [{ name: "Izhar Mohammed", url: "https://www.izhardev.me/" }],
   openGraph: {
     title: "Izhar Mohammed | Full-Stack Developer",
     description: "Check out my projects and skills!",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Izhar's Portfolio",
     images: [
       {
-        url: "/assets/luffy.jpg", // Replace with your OpenGraph image
+        url: "/assets/izhar.jpeg", // Replace with your OpenGraph image
         width: 1200,
         height: 630,
         alt: "Izhar Mohammed Portfolio Preview",
@@ -49,14 +49,16 @@ export const metadata: Metadata = {
     title: "Izhar Mohammed | Full-Stack Developer",
     description:
       "Building modern web applications with React, Next.js, and Node.js.",
-    images: ["/assets/luffy.jpg"], // Replace with your Twitter image
+    images: ["/assets/izhar.jpeg"], // Replace with your Twitter image
   },
   // themeColor: "#000000", // Dark theme (adjust to your design)
-  metadataBase: new URL("https://www.izhardev.me"), // Base URL for all metadata links
+  metadataBase: new URL("https://www.izhardev.me/"), // Base URL for all metadata links
 };
+
 export const viewport = {
-  themeColor: '#000000',
+  themeColor: "#000000",
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
