@@ -25,6 +25,12 @@ import { Badge } from "@/components/ui/badge";
 import { useRef } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import ExperienceSection from "@/components/experience";
+import {
+  containerVariants,
+  itemVariants,
+  scrollVariants,
+} from "@/constants/framer";
+import TechStack from "@/components/tech-stack";
 
 const skills = [
   "JavaScript",
@@ -42,99 +48,6 @@ const skills = [
   "Python",
   "Langchain",
   "Ai agents",
-];
-
-const techStack = [
-  {
-    name: "JavaScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  },
-  {
-    name: "TypeScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-  {
-    name: "Python",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-  },
-  {
-    name: "Next JS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-  },
-  {
-    name: "React JS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-  {
-    name: "Node JS",
-    icon: "/assets/nodejs.svg",
-  },
-  {
-    name: "Express JS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-  },
-  {
-    name: "Hono",
-    icon: "/assets/hono.svg",
-  },
-  {
-    name: "Prisma",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
-  },
-  {
-    name: "Drizzle",
-    icon: "https://avatars.githubusercontent.com/u/108468352?s=200&v=4",
-  }, // Drizzle ORM logo
-  {
-    name: "Mongoose",
-    icon: "https://avatars.githubusercontent.com/u/7552965?s=200&v=4",
-  },
-  {
-    name: "PostgreSQL",
-    icon: "/assets/elephant.png",
-  },
-  {
-    name: "Mongo DB",
-    icon: "/assets/mongodb.svg",
-  },
-  {
-    name: "Redis",
-    icon: "/assets/redis.svg",
-  },
-  {
-    name: "Docker",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-  },
-  {
-    name: "Trpc",
-    icon: "/assets/trpc.svg",
-  },
-  {
-    name: "GraphQL",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
-  },
-
-  {
-    name: "Langchain",
-    icon: "/assets/langchain-1.webp",
-  },
-  {
-    name: "AI agents",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
-  }, // Generic AI icon
-  {
-    name: "Git",
-    icon: "/assets/git.svg",
-  },
-
-  {
-    name: "Framer Motion",
-    icon: "/assets/motion.svg",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: "/assets/tailwindcss.svg",
-  },
 ];
 
 const projects = [
@@ -176,41 +89,6 @@ const projects = [
     ],
   },
 ];
-
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants: Variants = {
-  hidden: { y: 30, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
-
-const scrollVariants: Variants = {
-  hidden: { y: 50, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
 
 export default function Portfolio() {
   const ref = useRef(null);
@@ -413,50 +291,7 @@ export default function Portfolio() {
         </motion.section>
 
         {/* Tech stack section */}
-        <motion.section
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
-          className="py-12 sm:py-16 md:py-20"
-        >
-          <motion.h2
-            variants={scrollVariants}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold font-mono mb-8 sm:mb-12 text-center px-2"
-          >
-            Stack
-          </motion.h2>
-
-          <motion.div
-            variants={scrollVariants}
-            className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-4 sm:gap-6 max-w-5xl mx-auto"
-          >
-            {techStack.map((tech, index) => (
-              <motion.div
-                key={tech.name}
-                initial={{ opacity: 0, scale: 0.5, y: 20 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-                className="flex flex-col items-center group cursor-pointer"
-              >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg border border-gray-600 flex items-center justify-center transition-all duration-300">
-                  <Image
-                    src={tech.icon}
-                    alt={tech.name}
-                    width={32}
-                    height={32}
-                    className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
-                  />
-                </div>
-                <span className="text-xs sm:text-sm  mt-2 text-center  transition-colors">
-                  {tech.name}
-                </span>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.section>
+        <TechStack />
 
         <motion.section
           initial="hidden"
