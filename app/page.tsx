@@ -90,6 +90,10 @@ const techStack = [
     icon: "https://avatars.githubusercontent.com/u/7552965?s=200&v=4",
   },
   {
+    name: "PostgreSQL",
+    icon: "/assets/elephant.png",
+  },
+  {
     name: "Mongo DB",
     icon: "/assets/mongodb.svg",
   },
@@ -100,6 +104,10 @@ const techStack = [
   {
     name: "Docker",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  {
+    name: "Trpc",
+    icon: "/assets/trpc.svg",
   },
   {
     name: "GraphQL",
