@@ -43,6 +43,7 @@ export const projects = [
         image: "/assets/medium.jpg", // Add your project image
         liveUrl: null,
         videoUrl: "https://www.linkedin.com/posts/mohammed-izhar-46b232253_enhanced-medium-project-now-with-chatting-activity-7320136504964526080-CLIu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6BCxMB3z-ot6wnF6UvPvE3wyNtFHIqmRs", // Add your local video file
+        videoType: "linkedin",
         tags: [
             "React.js",
             "TypeScript",
@@ -62,7 +63,8 @@ export const projects = [
             "A comprehensive book management application inspired by GoodReads. Users can discover, track, and review books with a beautiful and intuitive interface. Features advanced search, book recommendations, reading progress tracking, and a responsive design.",
         image: "/assets/GoodReads.jpg", // Add your project image
         liveUrl: null,
-        videoUrl: "/videos/GoodReads.mp4", // Add your local video file
+        videoType: "linkedin",
+        videoUrl: "https://www.linkedin.com/posts/mohammed-izhar-46b232253_reactjs-webdevelopment-javascript-activity-7210753432415006720-nlnP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6BCxMB3z-ot6wnF6UvPvE3wyNtFHIqmRs", // Add your local video file
         tags: [
             "React",
             "Tailwind CSS",

@@ -1,3 +1,247 @@
+// import { containerVariants, scrollVariants } from "@/constants/framer";
+// import { projects } from "@/constants/projects";
+// import { motion } from "framer-motion";
+// import { Card } from "../ui/card";
+// import Image from "next/image";
+// import { Badge } from "../ui/badge";
+// import { Button } from "../ui/button";
+// import Link from "next/link";
+// import { ExternalLink, Play, X } from "lucide-react";
+// import { useState } from "react";
+
+// const Projects = () => {
+//   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
+//   return (
+//     <>
+//       <motion.section
+//         id="projects"
+//         initial="hidden"
+//         whileInView="visible"
+//         viewport={{ once: true, margin: "-100px" }}
+//         variants={containerVariants}
+//         className="py-12 sm:py-16 md:py-20"
+//       >
+//         <motion.h2
+//           variants={scrollVariants}
+//           className="text-2xl sm:text-3xl md:text-4xl font-bold font-mono mb-8 sm:mb-12 text-center px-2"
+//         >
+//           $ ls projects/
+//         </motion.h2>
+
+//         <div className="space-y-12 sm:space-y-16 md:space-y-20">
+//           {projects.map((project, index) => (
+//             <motion.div
+//               key={project.title}
+//               variants={scrollVariants}
+//               whileInView="visible"
+//               viewport={{ once: true, margin: "-50px" }}
+//               className={`flex flex-col ${
+//                 index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"
+//               } gap-6 sm:gap-8 items-center`}
+//             >
+//               <motion.div
+//                 className="flex-1 w-full"
+//                 whileHover={{ scale: 1.02 }}
+//                 transition={{ type: "spring", stiffness: 300 }}
+//               >
+//                 <Card className="overflow-hidden group cursor-pointer border-gray-700 hover:border-white">
+//                   <motion.div
+//                     className="aspect-video relative overflow-hidden"
+//                     whileHover={{ scale: 1.05 }}
+//                     transition={{ duration: 0.4 }}
+//                   >
+//                     <Image
+//                       src={project.image || ""}
+//                       alt={project.title}
+//                       fill
+//                       className="object-cover transition-transform duration-500 group-hover:scale-110"
+//                     />
+//                     <motion.div
+//                       className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+//                       initial={{ opacity: 0 }}
+//                       whileHover={{ opacity: 1 }}
+//                     />
+//                     {project.videoUrl && (
+//                       <motion.button
+//                         className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+//                         onClick={() => setSelectedVideo(project.videoUrl)}
+//                         whileHover={{ scale: 1.1 }}
+//                         whileTap={{ scale: 0.9 }}
+//                       >
+//                         <div className="bg-white/90 hover:bg-white rounded-full p-4 shadow-lg">
+//                           <Play
+//                             className="w-8 h-8 text-black ml-1"
+//                             fill="black"
+//                           />
+//                         </div>
+//                       </motion.button>
+//                     )}
+//                   </motion.div>
+//                 </Card>
+//               </motion.div>
+
+//               <motion.div
+//                 className="flex-1 space-y-4 w-full px-2 sm:px-0"
+//                 initial={{ x: index % 2 === 0 ? 50 : -50, opacity: 0 }}
+//                 whileInView={{ x: 0, opacity: 1 }}
+//                 viewport={{ once: true }}
+//                 transition={{ duration: 0.6, delay: 0.2 }}
+//               >
+//                 <motion.h3
+//                   className="text-xl sm:text-2xl md:text-3xl font-bold font-mono"
+//                   whileHover={{ x: 5 }}
+//                   transition={{ type: "spring", stiffness: 300 }}
+//                 >
+//                   {project.title}
+//                 </motion.h3>
+//                 <motion.p
+//                   className="text-sm sm:text-base md:text-lg leading-relaxed"
+//                   initial={{ opacity: 0 }}
+//                   whileInView={{ opacity: 1 }}
+//                   transition={{ delay: 0.3 }}
+//                 >
+//                   {project.description}
+//                 </motion.p>
+
+//                 <motion.div
+//                   className="flex flex-wrap gap-2"
+//                   initial={{ opacity: 0, y: 20 }}
+//                   whileInView={{ opacity: 1, y: 0 }}
+//                   transition={{ delay: 0.4 }}
+//                 >
+//                   {project.tags.map((tag, tagIndex) => (
+//                     <motion.div
+//                       key={tag}
+//                       initial={{ opacity: 0, scale: 0.8 }}
+//                       whileInView={{ opacity: 1, scale: 1 }}
+//                       transition={{ delay: 0.5 + tagIndex * 0.1 }}
+//                       whileHover={{ scale: 1.05, y: -1 }}
+//                     >
+//                       <Badge
+//                         variant="outline"
+//                         className="text-xs sm:text-sm border-gray-600"
+//                       >
+//                         {tag}
+//                       </Badge>
+//                     </motion.div>
+//                   ))}
+//                 </motion.div>
+
+//                 <motion.div
+//                   className="flex flex-col sm:flex-row gap-3 sm:gap-4"
+//                   initial={{ opacity: 0, y: 20 }}
+//                   whileInView={{ opacity: 1, y: 0 }}
+//                   transition={{ delay: 0.6 }}
+//                 >
+//                   {/* Live Demo Button - Show when liveUrl exists */}
+//                   {project.liveUrl && (
+//                     <motion.div
+//                       whileHover={{ scale: 1.05 }}
+//                       whileTap={{ scale: 0.95 }}
+//                       className="w-full sm:w-auto"
+//                     >
+//                       <Button
+//                         asChild
+//                         className="w-full sm:w-auto bg-white hover:bg-gray-200 text-black"
+//                       >
+//                         <Link
+//                           href={project.liveUrl}
+//                           target="_blank"
+//                           rel="noopener noreferrer"
+//                         >
+//                           <ExternalLink className="w-4 h-4 mr-2" />
+//                           Live Demo
+//                         </Link>
+//                       </Button>
+//                     </motion.div>
+//                   )}
+
+//                   {/* Watch Demo Button - Show when videoUrl exists */}
+//                   {project.videoUrl && (
+//                     <motion.div
+//                       whileHover={{ scale: 1.05 }}
+//                       whileTap={{ scale: 0.95 }}
+//                       className="w-full sm:w-auto"
+//                     >
+//                       <Button
+//                         variant="outline"
+//                         className="w-full sm:w-auto border-gray-600 text-gray-300 hover:bg-gray-900 hover:text-white hover:border-white"
+//                         onClick={() => setSelectedVideo(project.videoUrl)}
+//                       >
+//                         <Play className="w-4 h-4 mr-2" />
+//                         Watch Demo
+//                       </Button>
+//                     </motion.div>
+//                   )}
+
+//                   {/* Fallback message when neither liveUrl nor videoUrl exists */}
+//                   {!project.liveUrl && !project.videoUrl && (
+//                     <motion.div
+//                       className="w-full sm:w-auto"
+//                       initial={{ opacity: 0 }}
+//                       whileInView={{ opacity: 1 }}
+//                       transition={{ delay: 0.7 }}
+//                     >
+//                       <Button
+//                         variant="outline"
+//                         disabled
+//                         className="w-full sm:w-auto border-gray-600 text-gray-500 cursor-not-allowed"
+//                       >
+//                         Coming Soon
+//                       </Button>
+//                     </motion.div>
+//                   )}
+//                 </motion.div>
+//               </motion.div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </motion.section>
+
+//       {/* Video Modal */}
+//       {selectedVideo && (
+//         <motion.div
+//           className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           exit={{ opacity: 0 }}
+//           onClick={() => setSelectedVideo(null)}
+//         >
+//           <motion.div
+//             className="relative max-w-4xl w-full max-h-[80vh] bg-black rounded-lg overflow-hidden"
+//             initial={{ scale: 0.8, opacity: 0 }}
+//             animate={{ scale: 1, opacity: 1 }}
+//             exit={{ scale: 0.8, opacity: 0 }}
+//             onClick={(e) => e.stopPropagation()}
+//           >
+//             <button
+//               className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 rounded-full p-2 transition-colors"
+//               onClick={() => setSelectedVideo(null)}
+//             >
+//               <X className="w-6 h-6 text-white" />
+//             </button>
+//             <video
+//               controls
+//               autoPlay
+//               className="w-full h-full object-contain"
+//               onLoadedData={(e) => {
+//                 // Optional: Auto-play when video loads
+//                 e.currentTarget.play();
+//               }}
+//             >
+//               <source src={selectedVideo} type="video/mp4" />
+//               Your browser does not support the video tag.
+//             </video>
+//           </motion.div>
+//         </motion.div>
+//       )}
+//     </>
+//   );
+// };
+
+// export default Projects;
+
 import { containerVariants, scrollVariants } from "@/constants/framer";
 import { projects } from "@/constants/projects";
 import { motion } from "framer-motion";
@@ -10,7 +254,20 @@ import { ExternalLink, Play, X } from "lucide-react";
 import { useState } from "react";
 
 const Projects = () => {
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState<{
+    url: string;
+    type: string;
+  } | null>(null);
+
+  const handleVideoClick = (videoUrl: string, videoType: string) => {
+    if (videoType === "linkedin" || videoType === "external") {
+      // Open LinkedIn or external video in new tab
+      window.open(videoUrl, "_blank");
+    } else {
+      // Open local video in modal
+      setSelectedVideo({ url: videoUrl, type: videoType });
+    }
+  };
 
   return (
     <>
@@ -62,10 +319,12 @@ const Projects = () => {
                       initial={{ opacity: 0 }}
                       whileHover={{ opacity: 1 }}
                     />
-                    {project.videoUrl && (
+                    {project.videoUrl && project.videoType === "local" && (
                       <motion.button
                         className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                        onClick={() => setSelectedVideo(project.videoUrl)}
+                        onClick={() =>
+                          handleVideoClick(project.videoUrl, project.videoType)
+                        }
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                       >
@@ -164,14 +423,51 @@ const Projects = () => {
                       whileTap={{ scale: 0.95 }}
                       className="w-full sm:w-auto"
                     >
-                      <Button
-                        variant="outline"
-                        className="w-full sm:w-auto border-gray-600 text-gray-300 hover:bg-gray-900 hover:text-white hover:border-white"
-                        onClick={() => setSelectedVideo(project.videoUrl)}
-                      >
-                        <Play className="w-4 h-4 mr-2" />
-                        Watch Demo
-                      </Button>
+                      {project.videoType === "linkedin" ? (
+                        <Button
+                          asChild
+                          variant="outline"
+                          className="w-full sm:w-auto border-gray-600 text-gray-300 hover:bg-gray-900 hover:text-white hover:border-white"
+                        >
+                          <Link
+                            href={project.videoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Play className="w-4 h-4 mr-2" />
+                            View Demo on LinkedIn
+                          </Link>
+                        </Button>
+                      ) : project.videoType === "external" ? (
+                        <Button
+                          asChild
+                          variant="outline"
+                          className="w-full sm:w-auto border-gray-600 text-gray-300 hover:bg-gray-900 hover:text-white hover:border-white"
+                        >
+                          <Link
+                            href={project.videoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            View Case Study
+                          </Link>
+                        </Button>
+                      ) : (
+                        <Button
+                          variant="outline"
+                          className="w-full sm:w-auto border-gray-600 text-gray-300 hover:bg-gray-900 hover:text-white hover:border-white"
+                          onClick={() =>
+                            handleVideoClick(
+                              project.videoUrl,
+                              project.videoType
+                            )
+                          }
+                        >
+                          <Play className="w-4 h-4 mr-2" />
+                          Watch Demo
+                        </Button>
+                      )}
                     </motion.div>
                   )}
 
@@ -199,8 +495,8 @@ const Projects = () => {
         </div>
       </motion.section>
 
-      {/* Video Modal */}
-      {selectedVideo && (
+      {/* Video Modal - Only for local videos */}
+      {selectedVideo && selectedVideo.type === "local" && (
         <motion.div
           className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
           initial={{ opacity: 0 }}
@@ -230,7 +526,7 @@ const Projects = () => {
                 e.currentTarget.play();
               }}
             >
-              <source src={selectedVideo} type="video/mp4" />
+              <source src={selectedVideo.url} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </motion.div>
