@@ -105,6 +105,30 @@ const techStack = [
     name: "AI agents",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
   }, // Generic AI icon
+  {
+    name: "Git",
+    icon: "/assets/git.svg",
+  },
+  {
+    name: "Mongo DB",
+    icon: "/assets/mongodb.svg",
+  },
+  {
+    name: "Framer Motion",
+    icon: "/assets/motion.svg",
+  },
+  {
+    name: "Node JS",
+    icon: "/assets/nodejs.svg",
+  },
+  {
+    name: "Redis",
+    icon: "/assets/redis.svg",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "/assets/tailwindcss.svg",
+  },
 ];
 
 const projects = [
