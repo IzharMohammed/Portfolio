@@ -15,8 +15,6 @@ import Head from "next/head";
 //   subsets: ["latin"],
 // });
 
-import { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "Izhar Mohammed | Full-Stack Developer Portfolio",
   description:
