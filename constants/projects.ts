@@ -74,5 +74,22 @@ export const projects = [
             "React Hot Toast",
         ],
     },
-    
+    {
+        "title": "Live Streaming App",
+        "description": "A full-featured live streaming application with real-time streaming capabilities, interactive chat functionality, and user-friendly interfaces for both streamers and viewers. Built with modern web technologies and RTMP protocol for seamless streaming experience.",
+        "image": "/assets/live-streaming-app.png",
+        "liveUrl": null,
+        "videoUrl": "https://www.linkedin.com/posts/mohammed-izhar-46b232253_github-github-reactjs-activity-7214970872544051200-ilm1",
+        "videoType": "linkedin",
+        "tags": [
+            "React.js",
+            "Node.js",
+            "RTMP Protocol",
+            "Real-time Streaming",
+            "Interactive Chat",
+            "WebRTC",
+            "Live Broadcasting"
+        ]
+    }
+
 ];
