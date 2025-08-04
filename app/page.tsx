@@ -54,6 +54,10 @@ const techStack = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
   {
+    name: "Python",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  {
     name: "Next JS",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
@@ -61,10 +65,9 @@ const techStack = [
     name: "React JS",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
-
   {
     name: "Node JS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    icon: "/assets/nodejs.svg",
   },
   {
     name: "Express JS",
@@ -73,14 +76,6 @@ const techStack = [
   {
     name: "Hono",
     icon: "/assets/hono.svg",
-  },
-  {
-    name: "Docker",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-  },
-  {
-    name: "GraphQL",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
   },
   {
     name: "Prisma",
@@ -95,9 +90,22 @@ const techStack = [
     icon: "https://avatars.githubusercontent.com/u/7552965?s=200&v=4",
   },
   {
-    name: "Python",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    name: "Mongo DB",
+    icon: "/assets/mongodb.svg",
   },
+  {
+    name: "Redis",
+    icon: "/assets/redis.svg",
+  },
+  {
+    name: "Docker",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  {
+    name: "GraphQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+  },
+
   {
     name: "Langchain",
     icon: "/assets/langchain-1.webp",
@@ -110,21 +118,10 @@ const techStack = [
     name: "Git",
     icon: "/assets/git.svg",
   },
-  {
-    name: "Mongo DB",
-    icon: "/assets/mongodb.svg",
-  },
+
   {
     name: "Framer Motion",
     icon: "/assets/motion.svg",
-  },
-  {
-    name: "Node JS",
-    icon: "/assets/nodejs.svg",
-  },
-  {
-    name: "Redis",
-    icon: "/assets/redis.svg",
   },
   {
     name: "Tailwind CSS",
