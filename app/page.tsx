@@ -115,7 +115,7 @@ export default function Portfolio() {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-md mx-auto px-2"
+              className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 w-full max-w-md mx-auto px-2"
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
