@@ -153,13 +153,13 @@ const ExperienceSection = () => {
         <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4">
           Experience & Education
         </h2>
-        <p className="text-muted-foreground text-sm md:text-lg">
+        <p className="text-sm md:text-lg">
           My journey through education and professional development
         </p>
       </div>
 
       <div className="relative">
-        {/* Timeline line - thinner on mobile */}
+        {/* Timeline line  */}
         <div className="absolute left-3 md:left-8 top-0 bottom-0 w-0.5 bg-border"></div>
 
         <div className="space-y-8 md:space-y-12">
@@ -168,7 +168,7 @@ const ExperienceSection = () => {
               key={index}
               className="relative flex items-start gap-4 md:gap-8"
             >
-              {/* Timeline dot - smaller on mobile */}
+              {/* Timeline dot  */}
               <div className="relative z-10 flex-shrink-0">
                 <div
                   className={`w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-background flex items-center justify-center ${
@@ -179,9 +179,9 @@ const ExperienceSection = () => {
                 </div>
               </div>
 
-              {/* Content - adjusted padding and spacing */}
+              {/* Content  */}
               <div className="flex-grow min-w-0 pb-6 md:pb-8">
-                <div className="rounded-lg border bg-card p-4 md:p-6 shadow-sm">
+                <div className="rounded-lg border border-gray-700 p-4 md:p-6 shadow-sm">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 md:gap-2 mb-2 md:mb-3">
                     <h3 className="text-lg md:text-xl font-semibold">
                       {exp.title}
@@ -191,11 +191,11 @@ const ExperienceSection = () => {
                     </span>
                   </div>
 
-                  <h4 className="text-base md:text-lg font-medium text-muted-foreground mb-2 md:mb-3">
+                  <h4 className="text-base md:text-lg font-medium mb-2 md:mb-3">
                     {exp.organization}
                   </h4>
 
-                  <p className="text-muted-foreground text-sm md:text-base mb-3 md:mb-4 leading-relaxed">
+                  <p className="text-sm md:text-base mb-3 md:mb-4 leading-relaxed">
                     {exp.description}
                   </p>
 
@@ -220,19 +220,19 @@ const ExperienceSection = () => {
 
       {/* Stats section - adjusted grid and padding */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-        <div className="text-center p-3 md:p-6 rounded-lg border bg-card">
+        <div className="text-center p-3 md:p-6 rounded-lg border border-gray-700">
           <div className="text-xl md:text-2xl font-bold mb-1 md:mb-2">4+</div>
           <div className="text-xs md:text-sm text-muted-foreground">
             Years in Tech
           </div>
         </div>
-        <div className="text-center p-3 md:p-6 rounded-lg border bg-card">
+        <div className="text-center p-3 md:p-6 rounded-lg border border-gray-700 ">
           <div className="text-xl md:text-2xl font-bold mb-1 md:mb-2">1+</div>
           <div className="text-xs md:text-sm text-muted-foreground">
             Professional Exp
           </div>
         </div>
-        <div className="text-center p-3 md:p-6 rounded-lg border bg-card col-span-2 md:col-span-1">
+        <div className="text-center p-3 md:p-6 rounded-lg border border-gray-700  col-span-2 md:col-span-1">
           <div className="text-xl md:text-2xl font-bold mb-1 md:mb-2">SaaS</div>
           <div className="text-xs md:text-sm text-muted-foreground">
             SaaS Specialist
