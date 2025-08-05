@@ -16,7 +16,7 @@ const TechStack = () => {
         variants={scrollVariants}
         className="text-2xl sm:text-3xl md:text-4xl font-bold font-mono mb-8 sm:mb-12 text-center px-2"
       >
-        Stack
+        $ stack --version
       </motion.h2>
 
       <motion.div

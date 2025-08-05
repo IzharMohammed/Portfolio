@@ -43,7 +43,7 @@ const ExperienceSection = () => {
     {
       year: "2020 - 2022",
       title: "Intermediate",
-      organization: "Sri Chaitanya College",
+      organization: "Sri Chaitanya Inermediate College",
       description:
         "Completed intermediate education with strong foundation in mathematics and sciences, preparing for engineering studies.",
       type: "education",
@@ -51,7 +51,7 @@ const ExperienceSection = () => {
     {
       year: "2007 - 2020",
       title: "Secondary Education",
-      organization: "Education Sea Rock English Medium High School",
+      organization: "Sea Rock English Medium High School",
       description:
         "Completed secondary education with comprehensive learning in various subjects and strong English communication skills.",
       type: "education",
