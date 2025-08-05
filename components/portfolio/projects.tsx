@@ -402,7 +402,8 @@ const Projects = () => {
                     >
                       <Button
                         asChild
-                        className="w-full sm:w-auto bg-white hover:bg-gray-200 text-black"
+                        variant="outline"
+                        className="w-full sm:w-auto   border-gray-600  hover:bg-gray-900 hover:text-white hover:border-white"
                       >
                         <Link
                           href={project.liveUrl}
@@ -427,7 +428,7 @@ const Projects = () => {
                         <Button
                           asChild
                           variant="outline"
-                          className="w-full sm:w-auto border-gray-600 text-gray-300 hover:bg-gray-900 hover:text-white hover:border-white"
+                          className="w-full sm:w-auto border-gray-600  hover:bg-gray-900 hover:text-white hover:border-white"
                         >
                           <Link
                             href={project.videoUrl}
