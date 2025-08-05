@@ -53,7 +53,7 @@ const WhoAmI = () => {
             <Card className="h-full transition-all duration-300 hover:shadow-lg  border-gray-700 hover:border-white">
               <CardHeader className="pb-3 sm:pb-6">
                 <motion.div
-                  whileHover={{ rotate: 360 }}
+                  // whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
                   <item.icon className="w-6 h-6 sm:w-8 sm:h-8  mb-2" />
