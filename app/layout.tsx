@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Izhar Mohammed Portfolio",
     images: [
       {
-        url: "https://www.izhardev.me/assets/izhar.jpeg", // Use absolute URL
+        url: "https://www.izhardev.me/assets/portfolio.png", // Use absolute URL
         width: 1200,
         height: 630,
         alt: "Izhar Mohammed - Full-Stack Developer Portfolio",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "Izhar Mohammed | Full-Stack Developer",
     description:
       "Building modern web applications with React, Next.js, and Node.js. Specialized in SaaS development.",
-    images: ["https://www.izhardev.me/assets/izhar.jpeg"], // Use absolute URL
+    images: ["https://www.izhardev.me/assets/portfolio.png"], // Use absolute URL
   },
 
   // Additional meta tags for better compatibility
@@ -118,7 +118,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://www.izhardev.me/assets/izhar.jpeg"
+          content="https://www.izhardev.me/assets/portfolio.png"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -140,7 +140,7 @@ export default function RootLayout({
         />
         <meta
           property="twitter:image"
-          content="https://www.izhardev.me/assets/izhar.jpeg"
+          content="https://www.izhardev.me/assets/portfolio.png"
         />
 
         {/* Additional tags for WhatsApp/Discord */}
