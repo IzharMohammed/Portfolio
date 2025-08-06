@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     description:
       "Building modern web applications with React, Next.js, and Node.js. Specialized in SaaS development.",
     images: ["/assets/portfolio.png"], // Use relative URL
-    creator: "@yourtwitterhandle", // Add your actual Twitter handle
+    creator: "@MohammedIz48960",
   },
 
   // Additional meta tags
@@ -77,10 +77,19 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Force refresh of cached images - change this parameter when you update the image */}
-        <meta property="og:image" content="https://www.izhardev.me/assets/portfolio.png?v=2" />
-        <meta property="og:image:secure_url" content="https://www.izhardev.me/assets/portfolio.png?v=2" />
-        <meta property="twitter:image" content="https://www.izhardev.me/assets/portfolio.png?v=2" />
-        
+        <meta
+          property="og:image"
+          content="https://www.izhardev.me/assets/portfolio.png?v=2"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://www.izhardev.me/assets/portfolio.png?v=2"
+        />
+        <meta
+          property="twitter:image"
+          content="https://www.izhardev.me/assets/portfolio.png?v=2"
+        />
+
         {/* Additional meta tags for better compatibility */}
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
