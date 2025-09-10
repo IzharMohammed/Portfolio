@@ -38,7 +38,7 @@ export const techStack = [
     {
         name: "Drizzle",
         icon: "https://avatars.githubusercontent.com/u/108468352?s=200&v=4",
-    }, // Drizzle ORM logo
+    },
     {
         name: "Mongoose",
         icon: "https://avatars.githubusercontent.com/u/7552965?s=200&v=4",
@@ -60,6 +60,26 @@ export const techStack = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     },
     {
+        name: "Kubernetes",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+    },
+    {
+        name: "AWS",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+    },
+    {
+        name: "GitHub Actions",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    },
+    {
+        name: "Nginx",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
+    },
+    {
+        name: "Linux",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+    },
+    {
         name: "Trpc",
         icon: "/assets/trpc.svg",
     },
@@ -67,7 +87,6 @@ export const techStack = [
         name: "GraphQL",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
     },
-
     {
         name: "Langchain",
         icon: "/assets/langchain-1.webp",
@@ -75,12 +94,11 @@ export const techStack = [
     {
         name: "AI agents",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
-    }, // Generic AI icon
+    },
     {
         name: "Git",
         icon: "/assets/git.svg",
     },
-
     {
         name: "Framer Motion",
         icon: "/assets/motion.svg",
