@@ -74,39 +74,48 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        {/* Force refresh of cached images - change this parameter when you update the image */}
-        <meta
-          property="og:image"
-          content="https://www.izhardev.me/assets/portfolio.png?v=2"
+    <>
+      {process.env.NEXT_PUBLIC_ENABLE_UMAMI === "true" && (
+        <script
+          defer
+          src="/umami.js"
+          data-website-id="388aa383-02e0-4ae4-8756-1bcb604d4b49"
         />
-        <meta
-          property="og:image:secure_url"
-          content="https://www.izhardev.me/assets/portfolio.png?v=2"
-        />
-        <meta
-          property="twitter:image"
-          content="https://www.izhardev.me/assets/portfolio.png?v=2"
-        />
+      )}
+      <html lang="en">
+        <head>
+          {/* Force refresh of cached images - change this parameter when you update the image */}
+          <meta
+            property="og:image"
+            content="https://www.izhardev.me/assets/portfolio.png?v=2"
+          />
+          <meta
+            property="og:image:secure_url"
+            content="https://www.izhardev.me/assets/portfolio.png?v=2"
+          />
+          <meta
+            property="twitter:image"
+            content="https://www.izhardev.me/assets/portfolio.png?v=2"
+          />
 
-        {/* Additional meta tags for better compatibility */}
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/png" />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+          {/* Additional meta tags for better compatibility */}
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:type" content="image/png" />
+        </head>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </>
   );
 }

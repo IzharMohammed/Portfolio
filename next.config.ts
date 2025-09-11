@@ -18,6 +18,18 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/umami.js",
+        destination: "http://210.79.129.6:3002/script.js"
+      },
+      {
+        source: "/api/send",
+        destination: "http://210.79.129.6:3002/api/send"
+      }
+    ]
+  },
 };
 
 export default nextConfig;
